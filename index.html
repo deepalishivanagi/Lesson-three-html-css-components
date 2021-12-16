@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Component library</title>
+    <link href="styles.css" rel="stylesheet"/>
 </head>
 
 <body>
@@ -37,9 +38,9 @@
     <h2>@Containers</h2>
     <div>HTML provides a set of container tags. Those tags can contain an unspecified set of other tags.</div>
     <h2>Fluid Container</h2>
-    <div>This will go till the end of the page</div>
+    <div class="container container-fluid">This fluid container will go till the end of the page.We haven't given any style to it.</div>
     <h2>Centered Container</h2>
-    <div>This will go till the specified width</div>
+    <div class="container container-center">This centered container will go till the specified width. You can see it is placed at center because of giving perticular max width style to it.</div>
     <h4>Some of container tags are:</h4>
     <ul>
         <li>article</li>
@@ -55,11 +56,12 @@
     <h2>@Links</h2>
     <p>Links are something which connects to some other page and it again connects another page like this.
         Here we use anchor tag with href address</p>
-    <a href=''>Primary link</a>
-
     <p>primary link is like most & must use link. For example when creating any account login is primary &
-        after creating in profile edit or change is secondary link like this.</p>
-    <a href=''>Secondary link</a>
+            after creating in profile edit or change is secondary link like this.</p>
+    <a class="link Primary-link" href=''>Primary link</a>
+
+    
+    <a class="link Secondary-link" href=''>Secondary link</a>
 
     <hr>
     <h2>@Lists</h2>
@@ -69,60 +71,87 @@
         <li>two</li>
         <li>three</li>
     </ul>
+    <h3>Unordered list: With no bullets</h3>
+    <ul class="list-no-bullets">
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ul>
+    <h3>Unordered list:Inline list using style display</h3>
+    <ul class="list-no-bullets">
+        <li class="list-inline">one</li>
+        <li class="list-inline">two</li>
+        <li class="list-inline">three</li>
+    </ul>
     <h3>Ordered list: It comes with serial numbers like 1,2,3 etc</h3>
     <ol>
         <li>egg</li>
         <li>milk</li>
         <li>bread</li>
     </ol>
-    <h3>inline lists,
-        reverse ordered list: will update here once learn css</h3>
+    <h3>Ordered list: With reversed order by directly adding reverse in ol tag like 3,2,1 </h3>
+    <ol reversed>
+        <li>egg</li>
+        <li>milk</li>
+        <li>bread</li>
+    </ol>
+ 
 
     <hr>
     <h2>@Nav</h2>
     <p>Navigation is like section of a page whose purpose is to provide navigation links within the
          current document or other document. For example:Menus,indexes etc</p>
-         <nav>
-             <div>I am developer</div>
-             <ul>
-                 <a href='/'>Home</a>
-                 <a href='/'>Projects</a>
-                 <a href='/'>About</a>
+         <nav class="navigation container">
+             <div class="nav-div">I am developer</div>
+             <ul class="list-no-bullets">
+                  <li class="list-inline"> <a class="link link-active" href='/'>Home</a></li>
+                  <li class="list-inline"><a class="link" href='/'>Projects</a></li>
+                  <li class="list-inline"><a class="link" href='/'>About</a></li>
              </ul>
          </nav>
 
     <hr>
     <h2>@Header</h2>
-    <header>
-        <img src="Images/Hero.svg"style="height: 400px;width: 500px;"> 
-        <h3>Heading inside hero</h3>
+    <header class="header">
+        <img class="header-img" src="Images/Hero.svg"style="height: 400px;width: 500px;"> 
+        <h3 class="header-head">Adarsh balika <span class="highlight">the web developer</span></h3>
     </header>
 
     <hr>
     <h2>@Section</h2>
     <p></p>
-    <section>
-        <h3>Normal section/white section for css</h3>
-        <ul>
-            <li>heading center</li>
-            <li>padding top and bottom</li>
-            <li>This will have white background</li>
-        </ul>
+    <section class="section">
+        
+        <div class="white container-center">
+            <h3>Normal section/white section for css</h3>
+        <p>heading center,
+            padding top and bottom
+            ,This will have white background
+        </p>
+    </div>
     </section>
-    <section>
+    <section class="section">
+        
+        <div class="off-white container-center">
         <h3>off white section</h3>
-        <ul>
-            <li>background change</li>
-            <li>This will have grey back ground</li>
-        </ul>
+       <p>
+        background change
+        This will have grey back ground
+       </p>
+    </div>
     </section>
 
     <hr>
     <h2>@Footer</h2>
-    <footer>
-        <p>Big text</p>
-        <p>Inline lists</p>
-        <p>All centered</p>
+    <footer class="Footer">
+        <h3>Footer with big text, Inline lists, All centered</h3>
+        <ul class="list-no-bullets ">
+            <li class="list-inline"><a class="link" href="/">Social one</a></li>
+            <li class="list-inline"><a class="link" href="/">Social two</a></li>
+            <li class="list-inline"><a class="link" href="/">Social three</a></li>
+        </ul>
+
+        
         
     </footer>
 
